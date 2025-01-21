@@ -11,6 +11,7 @@ def add_user_db(name, phone_number):
     db.add(new_user)
     # сохраняем изменения
     db.commit()
+    return True
 # получение всех юзеров
 def get_all_user_db():
     # второй вариант создания сессии (актуальный)
