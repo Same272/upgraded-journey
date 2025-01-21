@@ -20,4 +20,5 @@ def get_top5_db(level, ):
 def get_20_questions_db(level):
     with next(get_db()) as db:
         questions_20 = db.query(Question).filter_by(level=level).all()
-        return questions_20
+        questions_2 = list(set(questions_20))
+        return questions_2[:20]
