@@ -10,7 +10,7 @@ class User(Base):
     phone_number = Column(String, unique=True)
     reg_date = Column(DateTime, default=datetime.now())
 
-class Question():
+class Question(Base):
     __tablename__ = 'questions'
     id = Column(Integer, primary_key=True, autoincrement=True)
     main_question = Column(String, nullable=False)
